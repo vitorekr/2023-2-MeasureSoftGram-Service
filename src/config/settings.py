@@ -41,6 +41,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -126,7 +127,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 POSTGRES_DB = os.getenv("POSTGRES_DB", "postgres")
 POSTGRES_USER = os.getenv("POSTGRES_USER", "postgres")
 POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "postgres")
-POSTGRES_HOST = os.getenv("POSTGRES_HOST", "0.0.0.0")
+POSTGRES_HOST = os.getenv("POSTGRES_HOST", "meas-db-instance.cwjaejm5k0x4.us-east-2.rds.amazonaws.com")
 POSTGRES_PORT = int(os.getenv("POSTGRES_PORT", "5432"))
 
 DATABASES = {
