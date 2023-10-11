@@ -124,10 +124,10 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-POSTGRES_DB = os.getenv("POSTGRES_DB", "postgres")
+POSTGRES_DB = os.getenv("POSTGRES_DB", "measuredatabase")
 POSTGRES_USER = os.getenv("POSTGRES_USER", "postgres")
 POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "postgres")
-POSTGRES_HOST = os.getenv("POSTGRES_HOST", "meas-db-instance.cwjaejm5k0x4.us-east-2.rds.amazonaws.com")
+POSTGRES_HOST = os.getenv("POSTGRES_HOST", "measure-database.cwjaejm5k0x4.us-east-2.rds.amazonaws.com")
 POSTGRES_PORT = int(os.getenv("POSTGRES_PORT", "5432"))
 
 DATABASES = {
